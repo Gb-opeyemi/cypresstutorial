@@ -1,0 +1,12 @@
+{
+   "signInIcon": "[href=\"/signin\"]",
+   "emailField": "#identity_email",
+   "emailText": "qaope@guerrillamail.com",
+   "passwordField": "#identity_password",
+   "passwordText": "Tester@2020",
+   "signInBtn": ".cta > .btn",
+   "newDeviceField": "#otp_token",
+   "newDeviceText": "QUIDAX123",
+   "newDeviceBtn": ".input-group-append",
+   "trustDeviceBtn": ".btn-green"
+}

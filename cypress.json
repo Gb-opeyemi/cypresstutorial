@@ -1,0 +1,7 @@
+{ "baseUrl": "https://staging.qdx.ninja",
+    "defaultCommandTimeout": 30000,
+    "viewportHeight": 900,
+    "viewportWidth": 1400,
+    "watchForFileChanges" : false,
+    "videoUploadOnPasses": false
+}
