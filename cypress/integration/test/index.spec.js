@@ -1,3 +1,5 @@
+import PageObjects from '../../support/pageObjects/pageObjects'
+const actions = new PageObjects()
 describe('Test quidax login', ()=>{
 
     it('Launch the site', ()=>{
@@ -5,20 +7,20 @@ describe('Test quidax login', ()=>{
         })
     it('Click the Sign In Icon', ()=>{
             cy.fixture('elementMapper').then((em)=>{
-                cy.get(em.signInIcon).should('be.visible').click()
+                actions.clickAnElement(em.signInIcon)
 
             })
         }) 
     it('Insert Credentials', ()=>{
             cy.fixture('elementMapper').then((em)=>{
-                cy.get(em.emailField).should('be.visible').type(em.emailText)
-                cy.get(em.passwordFields).should('be.visible').type(em.passwordText)
+                actions.typeAText(em.emailField, em.emailText)
+                actions.typeAText(em.passwordField, em.passwordText)
 
             })
         }) 
     it('Click the Sign in button', ()=>{
             cy.fixture('elementMapper').then((em)=>{
-                cy.get(em.signInBtn).should('be.visible').click()
+                actions.clickAnElement(em.signInBtn)
 
             })
         }) 
