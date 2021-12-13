@@ -1,8 +1,10 @@
+/// <reference types="cypress" />
+
 import PageObjects from '../../support/pageObjects/pageObjects'
 const actions = new PageObjects()
 describe('Test quidax login', ()=>{
 
-    it('Launch the site', ()=>{
+    it.only('Launch the site', ()=>{
         cy.visit('/')
         })
     it('Click the Sign In Icon', ()=>{
@@ -24,6 +26,14 @@ describe('Test quidax login', ()=>{
 
             })
         }) 
+
+    it.skip('Verify you are on New Device and Location Page', ()=>{
+            cy.fixture('elementMapper').then((em)=>{
+                actions.verifyText(em.verifyNewDeviceElm, em.verifyNewDeviceText)
+
+            })
+        }) 
+    
 
 
 

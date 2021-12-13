@@ -8,5 +8,7 @@
    "newDeviceField": "#otp_token",
    "newDeviceText": "QUIDAX123",
    "newDeviceBtn": ".input-group-append",
-   "trustDeviceBtn": ".btn-green"
+   "trustDeviceBtn": ".btn-green",
+   "verifyNewDeviceElm": ".header-md-alt",
+   "verifyNewDeviceText": "New device or location"
 }
