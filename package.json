@@ -9,6 +9,7 @@
   "author": "Opeyemi",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^9.1.1"
+    "cypress": "^9.1.1",
+    "cypress-fill-command": "^1.0.2"
   }
 }

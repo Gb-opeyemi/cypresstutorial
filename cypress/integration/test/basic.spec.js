@@ -5,43 +5,32 @@ const actions = new PageObjects()
 describe('Test quidax login', ()=>{
 
     it('Launch the site', ()=>{
-        cy.visit('/')
+        cy.openSite()
         })
     it('Click the Sign In Icon', ()=>{
             cy.fixture('elementMapper').then((em)=>{
-                actions.clickAnElement(em.signInIcon)
+                cy.clickAnElement(em.signInIcon)
 
             })
         }) 
     it('Insert Credentials', ()=>{
             cy.fixture('elementMapper').then((em)=>{
-                actions.typeAText(em.emailField, em.emailText)
-                actions.typeAText(em.passwordField, em.passwordText)
+                cy.typeSomeText(em.emailField, em.emailText)
+                cy.typeSomeText(em.passwordField, em.passwordText)
 
             })
         }) 
     it('Click the Sign in button', ()=>{
             cy.fixture('elementMapper').then((em)=>{
-                actions.clickAnElement(em.signInBtn)
+                cy.clickAnElement(em.signInBtn)
 
             })
         }) 
 
     it('Verify you are on New Device and Location Page', ()=>{
             cy.fixture('elementMapper').then((em)=>{
-                actions.verifyText(em.verifyNewDeviceElm, em.verifyNewDeviceText)
+                cy.verifyText(em.verifyNewDeviceElm, em.verifyNewDeviceText)
 
             })
         }) 
-    
-
-
-
-
-               /* cy.get(em.newDeviceField).should('be.visible').type(em.newDeviceText)
-                cy.get(em.newDeviceBtn).should('be.visible').click()
-                cy.get(em.trustDeviceBtn).should('be.visible').click()
-                //cy.get('a[href*="/trusted_devices"]').click*/
-            
-    
- })   
+})
